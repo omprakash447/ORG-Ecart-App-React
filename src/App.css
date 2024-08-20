@@ -1,0 +1,296 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s ease;
+    font-family: cursive;
+    list-style: none;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Navbar Styles */
+
+.navbar {
+    height: 100px;
+    width: 100%;
+    background-color: #070F2B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.navbar .logo h1 {
+    font-size: 30px;
+    color: white;
+}
+
+.navbar .contents {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar .contents ul {
+    display: flex;
+    gap: 40px;
+}
+
+li {
+    cursor: pointer;
+}
+
+.toggle-btn {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Home Section Styles */
+
+.home {
+    width: 100%;
+    overflow: hidden;
+}
+
+.home img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* Footer Styles */
+
+.footer {
+    height: 50vh;
+    width: 100vw;
+    background-color: #070F2B;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    gap: 40px;
+}
+
+
+/* Main Content Styles */
+
+.all {
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+}
+
+.shirt {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 400px;
+    width: 300px;
+    box-shadow: 0px 0px 10px black;
+    background-color: #03346E;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 30px #070F2B;
+}
+
+.card img {
+    height: 40%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button {
+    height: 50px;
+    width: 100px;
+    background-color: #070F2B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+}
+
+.contents img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+/* Cartbox Styles */
+
+.cartbox {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #222;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartbox:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cartbox p {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.cartbox img {
+    height: 100px;
+    width: 100px;
+}
+
+.cartbox .data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.cartbox button {
+    height: 50px;
+    width: 100px;
+    background-color: #070F2B;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        align-items: flex-start;
+    }
+    .navbar .contents {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #070F2B;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        padding: 20px;
+        text-align: center;
+        z-index: 999;
+    }
+    .navbar .contents.active {
+        display: flex;
+    }
+    .toggle-btn {
+        display: block;
+    }
+    .navbar .contents ul {
+        padding: 0;
+        gap: 10px;
+    }
+    .home img {
+        height: 60vh;
+        /* Reduce height for tablets and medium screens */
+    }
+    .footer {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .footer ul {
+        font-size: 18px;
+    }
+    .card {
+        width: 100%;
+    }
+    .cartbox img {
+        height: 80px;
+        width: 80px;
+    }
+    .cartbox p {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo h1 {
+        font-size: 20px;
+    }
+    .navbar .contents ul {
+        gap: 10px;
+    }
+    .footer ul {
+        font-size: 16px;
+    }
+    .home img {
+        height: 50vh;
+        /* Further reduce height for small screens */
+    }
+    .card {
+        width: 100%;
+        height: auto;
+    }
+    .cartbox {
+        margin: 10px 0;
+    }
+    .cartbox img {
+        height: 60px;
+        width: 60px;
+    }
+    .cartbox p {
+        font-size: 16px;
+    }
+}
